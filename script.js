@@ -398,22 +398,22 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
    ========================================= */
 const projectStaticData = {
     pitch: {
-        image: "/Users/sbai/.gemini/antigravity/brain/3c5d310e-8c41-4889-879b-b160d57aaa3c/pitch_analyzer_mockup_1773270302857.png",
+        image: "./assets/pitch_abstract.png",
         stack: ["Python", "DSP", "Threading", "Matplotlib", "NumPy"],
         github: "https://github.com/unknownahmad/pitch_analyzer"
     },
     hr: {
-        image: "/Users/sbai/.gemini/antigravity/brain/3c5d310e-8c41-4889-879b-b160d57aaa3c/hr_analytics_mockup_1773270317457.png",
+        image: "./assets/hr_abstract.png",
         stack: ["Python", "CustomTkinter", "SQLite", "Predictive Modeling", "Pandas"],
         github: "https://github.com/unknownahmad/HR-Analytics-Dashboard"
     },
     nlp: {
-        image: "/Users/sbai/.gemini/antigravity/brain/3c5d310e-8c41-4889-879b-b160d57aaa3c/nlp_analyzer_mockup_1773270332532.png",
+        image: "./assets/nlp_abstract.png",
         stack: ["Python", "NLP", "Machine Learning", "Sentiment Analysis", "NLTK"],
         github: "https://github.com/unknownahmad/text-analyzer-tool"
     },
     cl: {
-        image: "/Users/sbai/.gemini/antigravity/brain/3c5d310e-8c41-4889-879b-b160d57aaa3c/champions_league_mockup_1773270348507.png",
+        image: "./assets/ucl_abstract.png",
         stack: ["Python", "SQLite", "DeepSeek AI", "OOP", "Tkinter"],
         github: "https://github.com/unknownahmad/Champions-League-Gambling-Simulator-GUI-Edition-"
     }
@@ -446,12 +446,14 @@ function initCaseStudyEngine() {
             document.getElementById("cs-image").src = staticData.image;
             document.getElementById("cs-problem").textContent = localizedData.problem;
             document.getElementById("cs-solution").textContent = localizedData.solution;
+            document.getElementById("cs-highlight").textContent = localizedData.highlight;
             document.getElementById("cs-github").href = staticData.github;
             document.getElementById("cs-github").textContent = translations[currentLang].btn_view_github;
 
             // Static labels from i18n
             document.getElementById("label-problem").textContent = translations[currentLang].cs_problem;
             document.getElementById("label-solution").textContent = translations[currentLang].cs_solution;
+            document.getElementById("label-highlight").textContent = translations[currentLang].cs_highlight;
             document.getElementById("label-tech").textContent = translations[currentLang].cs_tech;
 
             const stackBox = document.getElementById("cs-stack");

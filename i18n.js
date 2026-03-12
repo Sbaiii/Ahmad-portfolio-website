@@ -14,7 +14,7 @@ const translations = {
         btn_contact_info: "Contact Info",
         btn_work: "View My Work",
         btn_contact: "Get in Touch",
-        about_title: "Playground",
+        about_title: "About",
         tab_archive: "Archive",
         about_p1: "From the hardware-level precision of Mechatronics to the predictive power of Data Science. I build systems that don't just process data—they understand it.",
         about_p2: "My journey is defined by a relentless curiosity and a drive to turn complex problems into elegant, automated solutions that ship.",
@@ -57,6 +57,7 @@ const translations = {
         proj_cl_short: "AI-driven tournament simulation with betting mechanics.",
         cs_problem: "The Problem",
         cs_solution: "The Solution",
+        cs_highlight: "Engineering Highlights",
         cs_tech: "Technical Stack",
         btn_view_github: "View Repository",
         btn_view_case: "View Case Study",
@@ -69,21 +70,25 @@ const translations = {
                 title: "Vocal Pitch Analyzer",
                 problem: "Achieving millisecond-precision pitch tracking in real-world environments often results in high CPU overhead and signal latency, making real-time analysis difficult without specialized hardware.",
                 solution: "Engineered a modular, multi-threaded DSP engine using Python. Implemented autocorrelation-based frequency tracking and real-time buffer management, delivering peak performance and low-latency visualization.",
+                highlight: "Built a custom Autocorrelation Engine replacing standard FFT to eliminate harmonic octave jumps. Decoupled audio I/O using threading, applied Hanning windows to prevent spectral leakage, and engineered a moving-average filter to smooth micro-jitters."
             },
             hr: {
                 title: "HR Analytics Pipeline",
                 problem: "Manual HR tracking suffers from data fragmentation and a lack of predictive transparency, preventing organizations from identifying salary inequities and attrition risks.",
                 solution: "Developed a centralized modular data pipeline with a high-performance GUI. Integrated persistent storage and predictive salary modeling to deliver actionable business intelligence and trend forecasting.",
+                highlight: "Designed a completely decoupled architecture separating the GUI (CustomTkinter) from the Data/Math Engine. Handled persistent I/O operations and engineered Pandas-style group aggregations to simulate company-wide percentage salary raises."
             },
             nlp: {
                 title: "NLP Text-Analyzer",
                 problem: "Analyzing massive text datasets usually requires cloud-based NLP services, which introduce high costs, latency, and significant data privacy concerns for sensitive documentation.",
                 solution: "Built a professional offline NLP dashboard that supports bulk PDF/Word uploads. Implemented local Machine Learning models for sentiment analysis and advanced frequency metrics, ensuring 100% data privacy.",
+                highlight: "Leveraged the TextBlob ML model for zero-API emotional polarity detection. Integrated PyPDF and Python-docx for robust document parsing, and engineered advanced noise-filtering algorithms to surface true word frequencies and sentence patterns."
             },
             cl: {
                 title: "UCL Simulator v2",
                 problem: "Creating a realistic sports simulation requires balancing complex state management, data persistence, and intelligent AI decision-making within a unified user experience.",
                 solution: "Architected an OOP-driven tournament simulator with SQLite persistence. Integrated the DeepSeek AI API to power intelligent betting mechanics and realistic match simulations, all within a high-energy GUI.",
+                highlight: "Implemented threaded match simulations to prevent GUI freezing. Secured DeepSeek AI integration for dynamic data loading, established SQLite row persistence for Premium User inheritance logic, and included strict RegEx authentication."
             }
         }
     },
@@ -102,7 +107,7 @@ const translations = {
         btn_contact_info: "Infos de Contact",
         btn_work: "Voir Mon Travail",
         btn_contact: "Me Contacter",
-        about_title: "Playground",
+        about_title: "À propos",
         tab_archive: "Archive",
         about_p1: "De la précision matérielle de la mécatronique à la puissance prédictive de la Data Science. Je construis des systèmes qui ne se contentent pas de traiter des données—ils les comprennent.",
         about_p2: "Mon parcours est défini par une curiosité sans fin et la volonté de transformer des problèmes complexes en solutions automatisées.",
@@ -147,6 +152,7 @@ const translations = {
         proj_cl_short: "Simulation de tournoi IA avec mécanique de pari.",
         cs_problem: "Le Problème",
         cs_solution: "La Solution",
+        cs_highlight: "Points Forts de l'Ingénierie",
         cs_tech: "Stack Technique",
         btn_view_github: "Voir le Dépôt",
         btn_view_case: "Voir le Cas d'Étude",
@@ -159,21 +165,25 @@ const translations = {
                 title: "Analyseur de Pitch Vocal",
                 problem: "Atteindre un suivi du pitch avec une précision à la milliseconde dans des environnements réels entraînant souvent une charge CPU élevée et une latence du signal.",
                 solution: "Conception d'un moteur DSP multi-threadé modulaire en Python. Implémentation du suivi de fréquence basé sur l'autocorrélation et gestion en temps réel des buffers.",
+                highlight: "Construction d'un Moteur d'Autocorrélation personnalisé remplaçant la FFT standard pour éliminer les sauts d'octave harmoniques. Découplage des E/S audio via threading, application de fenêtres de Hanning pour éviter les fuites spectrales, et ingénierie d'un filtre à moyenne mobile pour lisser les micro-variations."
             },
             hr: {
                 title: "Pipeline d'Analyse RH",
                 problem: "Le suivi RH manuel souffre d'une fragmentation des données et d'un manque de transparence prédictive, empêchant d'identifier les iniquités salariales.",
                 solution: "Développement d'un pipeline de données modulaire centralisé avec une interface haute performance. Intégration du stockage persistant et de la modélisation prédictive.",
+                highlight: "Conception d'une architecture entièrement découplée séparant l'interface (CustomTkinter) du Moteur de Données/Mathématique. Gestion des opérations d'E/S persistantes et ingénierie d'agrégations de type Pandas pour simuler les augmentations salariales de l'entreprise."
             },
             nlp: {
                 title: "Analyseur de Texte NLP",
                 problem: "L'analyse massive de données textuelles nécessite généralement des services NLP cloud, qui introduisent des coûts élevés et des problèmes de confidentialité.",
                 solution: "Création d'un tableau de bord NLP hors ligne supportant l'importation de PDF/Word. Implémentation de modèles locaux de Machine Learning pour l'analyse de sentiment.",
+                highlight: "Utilisation du modèle ML TextBlob pour la détection de polarité émotionnelle sans API. Intégration de PyPDF et Python-docx pour l'analyse robuste de documents, et ingénierie d'algorithmes de filtrage de bruit avancés pour révéler les véritables fréquences de mots et motifs de phrases."
             },
             cl: {
                 title: "Simulateur UCL v2",
-                problem: "Créer une simulation sportive réaliste nécessite d'équilibrer une gestion d'état complexe, la persistance des données et une prise de decisión IA intelligente.",
+                problem: "Créer une simulation sportive réaliste nécessite d'équilibrer une gestion d'état complexe, la persistance des données et une prise de décision IA intelligente.",
                 solution: "Architecture d'un simulateur de tournoi orienté objet avec persistance SQLite. Intégration de l'API IA DeepSeek pour alimenter des mécaniques de paris intelligentes.",
+                highlight: "Implémentation de simulations de matchs threadées pour éviter le blocage de l'interface. Sécurisation de l'intégration IA DeepSeek, établissement de la persistance des lignes SQLite pour la logique d'héritage des utilisateurs premium, et inclusion d'une authentification stricte par RegEx."
             }
         }
     },
@@ -192,7 +202,7 @@ const translations = {
         btn_contact_info: "Información de Contacto",
         btn_work: "Ver Mi Trabajo",
         btn_contact: "Ponerse en Contacto",
-        about_title: "Playground",
+        about_title: "Sobre Mí",
         tab_archive: "Archivo",
         about_p1: "Desde la precisión de la mecatrónica hasta el poder predictivo de Data Science. Construyo sistemas que no solo procesan datos, sino que los entienden.",
         about_p2: "Mi trayectoria se define por una curiosidad incansable y el impulso de transformar problemas complejos en soluciones elegantes.",
@@ -249,21 +259,25 @@ const translations = {
                 title: "Analizador de Pitch Vocal",
                 problem: "Lograr un seguimiento del pitch con precisión de milisegundos en entornos reales a menudo resulta en una alta carga de CPU y latencia de señal.",
                 solution: "Diseñó un motor DSP multi-hilo modular en Python. Implementó seguimiento de frecuencia basado en autocorrelación y gestión de buffers en tiempo real.",
+                highlight: "Construyó un Motor de Autocorrelación personalizado reemplazando la FFT estándar para eliminar saltos de octava armónicos. Desacopló las E/S de audio usando hilos, aplicó ventanas de Hanning para prevenir fugas espectrales, e ingenió un filtro de media móvil para suavizar micro-variaciones."
             },
             hr: {
                 title: "Pipeline de Análisis de RRHH",
                 problem: "El seguimiento manual de RRHH sufre de fragmentación de datos y falta de transparencia predictiva, lo que impide identificar desigualdades salariales.",
                 solution: "Desarrolló un pipeline de datos modular centralizado con una interfaz de alto rendimiento. Integró almacenamiento persistente y modelado predictivo.",
+                highlight: "Diseñó una arquitectura completamente desacoplada separando la interfaz (CustomTkinter) del Motor de Datos/Matemáticas. Gestionó operaciones de E/S persistentes e ingenió agregaciones tipo Pandas para simular aumentos salariales en la empresa."
             },
             nlp: {
                 title: "Analizador de Texto NLP",
                 problem: "El análisis de conjuntos masivos de datos de texto suele requerir servicios de NLP en la nube, lo que introduce altos costes y problemas de privacidad.",
                 solution: "Construyó un panel de NLP profesional fuera de línea que admite cargas masivas de PDF/Word. Implementó modelos locales de Machine Learning.",
+                highlight: "Aprovechó el modelo de ML TextBlob para la detección de polaridad emocional sin API. Integró PyPDF y Python-docx para el análisis robusto de documentos, e ingenió algoritmos avanzados de filtrado de ruido para revelar verdaderas frecuencias de palabras y patrones de oraciones."
             },
             cl: {
                 title: "Simulador UCL v2",
                 problem: "Crear una simulación deportiva realista requiere equilibrar una gestión de estado compleja, persistencia de datos y toma de decisiones inteligente por IA.",
                 solution: "Arquitectó un simulador de torneos orientado a objetos con persistencia SQLite. Integró la API de IA DeepSeek para mecánicas de apuestas inteligentes.",
+                highlight: "Implementó simulaciones de partidos en hilos para evitar el bloqueo de la interfaz. Aseguró la integración de IA DeepSeek, estableció la persistencia de filas SQLite para la lógica de herencia de usuarios premium, e incluyó autenticación estricta por RegEx."
             }
         }
     }
