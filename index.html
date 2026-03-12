@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technical Solutions Engineer & Data Science Student Portfolio - Ahmad Sbai">
+    <meta name="author" content="Ahmad Sbai">
+    <title>Ahmad Sbai - Data Scientist & Engineer</title>
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Ahmad Sbai - Data Scientist & Engineer">
+    <meta itemprop="description" content="Technical Solutions Engineer & Data Science Student Portfolio - Ahmad Sbai">
+    <meta itemprop="image" content="https://sbaiii.com/assets/favicon.png">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://sbaiii.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ahmad Sbai - Data Scientist & Engineer">
+    <meta property="og:description"
+        content="Technical Solutions Engineer & Data Science Student Portfolio - Ahmad Sbai">
+    <meta property="og:image" content="https://sbaiii.com/assets/favicon.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ahmad Sbai - Data Scientist & Engineer">
+    <meta name="twitter:description"
+        content="Technical Solutions Engineer & Data Science Student Portfolio - Ahmad Sbai">
+    <meta name="twitter:image" content="https://sbaiii.com/assets/favicon.png">
+
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/favicon.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <!-- Performance Preloads -->
+    <link rel="preload" href="assets/profile-pic-curly.png" as="image">
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="logo">Ahmad Sbai<span class="dot">.</span></div>
+        <nav class="nav-links">
+            <a href="#about" data-i18n="nav_about">About</a>
+            <a href="#experience" data-i18n="nav_experience">Experience</a>
+            <a href="#skills" data-i18n="nav_skills">Skills</a>
+            <a href="#projects" data-i18n="nav_projects">Projects</a>
+            <a href="#contact" data-i18n="nav_contact">Contact</a>
+        </nav>
+        <div class="controls">
+            <!-- Language Selector -->
+            <div class="lang-selector">
+                <button class="lang-btn" id="current-lang">EN</button>
+                <div class="lang-dropdown">
+                    <button data-lang="en">English</button>
+                    <button data-lang="fr">Français</button>
+                    <button data-lang="es">Español</button>
+                </div>
+            </div>
+            <!-- Theme Toggle -->
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-visual">
+            <!-- 3D Card Container -->
+            <div class="id-card-wrapper" id="id-card">
+                <div class="id-card-inner">
+                    <!-- Front Face -->
+                    <div class="id-card-front">
+                        <div class="card-gloss"></div>
+                        <div class="card-header">
+                            <div class="brand-group">
+                                <h2 class="brand-title">HARBOUR.SPACE</h2>
+                                <p class="brand-sub">INSTITUTE OF TECHNOLOGY</p>
+                            </div>
+                        </div>
+
+                        <div class="card-pvc-body">
+                            <div class="portrait-ring">
+                                <div class="portrait-image">
+                                    <img src="assets/profile-pic-curly.png" alt="Ahmad Sbai" class="id-photo">
+                                </div>
+                                <div class="scanner-line"></div>
+                            </div>
+                            <div class="id-info">
+                                <span class="role-badge">STUDENT</span>
+                                <h3 class="id-name">Ahmad Sbai</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Back Face -->
+                    <div class="id-card-back">
+                        <div class="card-gloss"></div>
+                        <div class="back-header">
+                            <div class="brand-logo-small">HARBOUR.SPACE</div>
+                            <div class="back-title">INSTITUTE OF TECHNOLOGY</div>
+                        </div>
+
+                        <div class="back-content minimal">
+                            <h3 class="back-name">Ahmad Sbai</h3>
+                            <div class="serial-no">Future Data Scientist</div>
+                        </div>
+
+                        <div class="back-footer">
+                            <div class="qr-code">
+                                <svg width="40" height="40" viewBox="0 0 60 60" fill="currentColor">
+                                    <path
+                                        d="M0,0h20v4H4v16H0V0z M40,0h20v20h-4V4H40V0z M0,40h4v16h16v4H0V40z M60,40v20H40v-4h16V40H60z" />
+                                    <rect x="10" y="10" width="8" height="8" />
+                                    <rect x="42" y="10" width="8" height="8" />
+                                    <rect x="10" y="42" width="8" height="8" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="id-hint">Click to flip</p>
+        </div>
+        <div class="hero-content">
+            <span class="hero-greeting" data-i18n="hero_greeting">Hello, I'm</span>
+            <h1 class="hero-name" data-i18n="hero_name">Ahmad Sbai</h1>
+            <h2 class="hero-role" data-i18n="hero_role">Data Science • Mechatronics Engineer</h2>
+
+            <div class="hero-actions">
+                <a href="./assets/resume.pdf" class="btn btn-outline" data-i18n="btn_resume">Download Resume</a>
+                <a href="#contact" class="btn btn-primary" data-i18n="btn_contact_info">Contact Info</a>
+            </div>
+
+            <div class="hero-socials">
+                <a href="https://www.linkedin.com/in/ahmadsbai/" target="_blank" rel="noopener noreferrer"
+                    class="social-icon" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/unknownahmad" target="_blank" rel="noopener noreferrer" class="social-icon"
+                    aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="https://www.kaggle.com/ahmadsbai" target="_blank" rel="noopener noreferrer" class="social-icon"
+                    aria-label="Kaggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M18.825 23.859c-.022.013-.042.022-.062.031-.023.01-.044.02-.066.027-.013.005-.025.008-.038.012l-.048.012c-.012.004-.025.006-.038.008l-.055.009c-.013.002-.025.002-.038.003L18.428 24c-.031 0-.061-.001-.091-.002l-.053-.004c-.012-.001-.024-.002-.036-.003l-.06-.008c-.011-.002-.021-.003-.031-.005l-.066-.013c-.007-.002-.014-.003-.021-.005l-.014-.003c-1.127-.272-1.93-1.258-1.93-2.433v-4.102l-2.732-2.71c-.347-.344-.658-.707-.93-1.082l-3.344 3.22v4.864c0 1.268-.934 2.348-2.185 2.378H7.13c-1.251-.03-2.185-1.11-2.185-2.378v-18.7c0-1.268.934-2.348 2.185-2.378h.01c1.251.03 2.185 1.11 2.185 2.378v8.423l6.57-6.331c.214-.207.472-.364.757-.456l.011-.004.01-.003c.046-.014.091-.024.137-.031.056-.01.112-.015.168-.018l.056-.002h.001c.036 0 .073 0 .109.003l.055.005c.012.001.025.002.037.004l.053.007c.013.002.025.004.037.006l.051.01c.012.002.024.005.035.008l.024.006c.866.223 1.543.896 1.776 1.758.002.009.006.017.008.026.002.102.016.204.041.302l.006.027c.015.068.04.132.072.193.011.021.023.041.036.061.018.027.039.052.062.076l-5.733 5.526 5.8 5.748c.026.026.05.053.069.083.012.018.024.037.034.056.028.055.05.113.065.174l.004.017c.015.063.024.128.027.194.001.019.002.038.002.057v3.743c0 .19-.011.378-.032.562l-.004.036c-.004.034-.01.068-.018.102l-.005.018c-.015.055-.034.108-.057.16l-.013.029c-.033.07-.074.136-.122.198l-.023.029c-.053.066-.113.126-.18.179l-.014.011z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Ahmad Sbai Signature Dashboard) -->
+    <section class="about section" id="about">
+        <h2 class="section-title" data-i18n="about_title">Playground</h2>
+        <div class="apple-dashboard glass-card" data-tilt>
+            <!-- Window Header -->
+            <div class="window-header">
+                <div class="traffic-lights">
+                    <span class="light red"></span>
+                    <span class="light yellow"></span>
+                    <span class="light green"></span>
+                </div>
+                <div class="window-title">Ahmad Sbai — system_info</div>
+            </div>
+
+            <div class="window-body">
+                <!-- Sidebar Navigation -->
+                <aside class="window-sidebar">
+                    <nav class="sidebar-nav">
+                        <button class="nav-item active" data-tab="archive">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                </path>
+                            </svg>
+                            <span data-i18n="tab_archive">Archive</span>
+                        </button>
+                        <button class="nav-item" data-tab="nexus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="16"></line>
+                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                            </svg>
+                            <span data-i18n="bento_focus_title">Nexus</span>
+                        </button>
+                        <button class="nav-item" data-tab="schematic">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                            <span data-i18n="bento_edu_title">Schematic</span>
+                        </button>
+                    </nav>
+                </aside>
+
+                <!-- Content Area -->
+                <main class="window-content">
+                    <!-- Archive Tab (Bio) -->
+                    <div class="tab-pane active" id="pane-archive">
+                        <div class="module-content">
+                            <p class="decrypt-text"
+                                data-text="Engineer of intelligence. Architect of data. I don't just solve problems; I re-engineer reality through the lens of Mechatronics and Data Science.">
+                                Engineer of intelligence. Architect of data. I don't just solve problems; I re-engineer
+                                reality through the lens of Mechatronics and Data Science.</p>
+                            <div class="code-flicker">const synergy = mechatronics + data_science;</div>
+                        </div>
+                    </div>
+
+                    <!-- Nexus Tab (Synapse Nebula) -->
+                    <div class="tab-pane" id="pane-nexus">
+                        <canvas id="synapse-nebula"></canvas>
+                        <div class="nebula-label">
+                            <h3 class="focus-text">Synapse Nebula</h3>
+                            <p class="bento-label">Real-time deep learning & NLP visualization</p>
+                        </div>
+                    </div>
+
+                    <!-- Schematic Tab (Education) -->
+                    <div class="tab-pane" id="pane-schematic">
+                        <div class="schematic-grid">
+                            <div class="schematic-node">
+                                <span class="node-id">Build_0x01</span>
+                                <h3 class="node-title">Engineering Path</h3>
+                                <p class="node-details">BEng (Hons) Mechatronics Engineering</p>
+                                <div class="node-unis">
+                                    <span class="uni-tag">APU • Malaysia</span>
+                                    <span class="uni-tag">DMU • UK</span>
+                                </div>
+                            </div>
+
+                            <div class="schematic-connector">
+                                <div class="connector-line"></div>
+                                <div class="connector-arrow"></div>
+                            </div>
+
+                            <div class="schematic-node highlight">
+                                <span class="node-id">Build_0x02</span>
+                                <h3 class="node-title">Data Science Path</h3>
+                                <p class="node-details">BSc (Hons) Data Science</p>
+                                <div class="node-unis">
+                                    <span class="uni-tag">Harbour.Space • Barcelona</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience section" id="experience">
+        <h2 class="section-title" data-i18n="experience_title">Experience</h2>
+
+        <div class="synapse-container">
+            <!-- Central Glowing Path -->
+            <div class="synapse-path-wrapper">
+                <svg class="synapse-svg" preserveAspectRatio="none">
+                    <path class="path-bg" d="M2.5,0 L2.5,1000"></path>
+                    <path class="path-active" d="M2.5,0 L2.5,1000"></path>
+                </svg>
+            </div>
+
+            <div class="synapse-journey">
+                <!-- Experience Item 4 (ESTRACOM) -->
+                <div class="journey-step left">
+                    <div class="journey-dot"></div>
+                    <div class="journey-card glass-card">
+                        <div class="card-glow"></div>
+                        <span class="journey-date" data-i18n="exp4_date">2024 – 2025</span>
+                        <h3 class="journey-title" data-i18n="exp4_title">Python Automation Developer (Contract)</h3>
+                        <h4 class="journey-company" data-i18n="exp4_company">ESTRACOM — Morocco</h4>
+                        <p class="journey-desc" data-i18n="exp4_desc">Engineered a custom Digital Archiving System in
+                            Python, digitizing the company's entire paper-based legacy archive and reducing retrieval
+                            time by 80%.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Database Archiving</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 1 (Freelance) -->
+                <div class="journey-step right">
+                    <div class="journey-dot"></div>
+                    <div class="journey-card glass-card">
+                        <div class="card-glow"></div>
+                        <span class="journey-date" data-i18n="exp1_date">2023 – Present</span>
+                        <h3 class="journey-title" data-i18n="exp1_title">Freelance Software Developer</h3>
+                        <h4 class="journey-company" data-i18n="exp1_company">Remote</h4>
+                        <p class="journey-desc" data-i18n="exp1_desc">Architected bespoke desktop applications for small
+                            businesses to automate inventory tracking and sales logging.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Custom Apps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 (Kidocode) -->
+                <div class="journey-step left">
+                    <div class="journey-dot"></div>
+                    <div class="journey-card glass-card">
+                        <div class="card-glow"></div>
+                        <span class="journey-date" data-i18n="exp2_date">2023</span>
+                        <h3 class="journey-title" data-i18n="exp2_title">Electronics & Programming Instructor (Intern)
+                        </h3>
+                        <h4 class="journey-company" data-i18n="exp2_company">Kidocode — Malaysia</h4>
+                        <p class="journey-desc" data-i18n="exp2_desc">Taught fundamental C/C++ and Python programming
+                            concepts by developing hands-on, interactive robotics projects.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">C/C++</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Robotics</span>
+                            <span class="tech-tag">Mentoring</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <h2 class="section-title" data-i18n="skills_title">Technical Proficiency</h2>
+
+        <div class="skills-grid">
+            <div class="about-containers">
+                <!-- Data & Analytics -->
+                <div class="details-container">
+                    <h2 class="experience-sub-title" data-i18n="skill_cat_data">Data & Analytics</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                                alt="Python" class="icon" />
+                            <h3 data-i18n="skill_python_ds">Python (DS Stack)</h3>
+                            <p>Pandas, NumPy, SciPy</p>
+                        </article>
+                        <article>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg"
+                                alt="SQL" class="icon" />
+                            <h3 data-i18n="skill_sql_ds">SQL (SQLite)</h3>
+                            <p>Querying & Processing</p>
+                        </article>
+                        <article>
+                            <i class="fas fa-chart-line icon-fa"></i>
+                            <h3 data-i18n="skill_predictive">Predictive Modeling</h3>
+                            <p>EDA & Pipelines</p>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Engineering -->
+                <div class="details-container">
+                    <h2 class="experience-sub-title" data-i18n="skill_cat_eng">Engineering & Architecture</h2>
+                    <div class="article-container">
+                        <article>
+                            <i class="fas fa-microchip icon-fa"></i>
+                            <h3 data-i18n="skill_signal">Signal Processing</h3>
+                            <p>Real-Time Control</p>
+                        </article>
+                        <article>
+                            <i class="fas fa-project-diagram icon-fa"></i>
+                            <h3 data-i18n="skill_modular">Modular Architecture</h3>
+                            <p>System Design</p>
+                        </article>
+                        <article>
+                            <i class="fab fa-git-alt icon-fa"></i>
+                            <h3 data-i18n="skill_git">Git Control</h3>
+                            <p>Version Management</p>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Software Development -->
+                <div class="details-container">
+                    <h2 class="experience-sub-title" data-i18n="skill_cat_soft">Software Development</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                                alt="C++" class="icon" />
+                            <h3 data-i18n="skill_cpp">C / C++</h3>
+                            <p>High Performance</p>
+                        </article>
+                        <article>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg"
+                                alt="MATLAB" class="icon" />
+                            <h3 data-i18n="skill_matlab">MATLAB</h3>
+                            <p>Numerical Engine</p>
+                        </article>
+                        <article>
+                            <i class="fas fa-plug icon-fa"></i>
+                            <h3 data-i18n="skill_api">API Integration</h3>
+                            <p>Systems Linkage</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="showcase-section">
+        <div class="section-container">
+            <h2 class="section-title gradient-text" data-i18n="projects_title">Projects Showcase</h2>
+            <div class="projects-v3-grid">
+                <!-- Project 1: Vocal Pitch Analyzer -->
+                <div class="v3-card primary" data-project="pitch">
+                    <div class="v3-card-media">
+                        <img src="/Users/sbai/.gemini/antigravity/brain/3c5d310e-8c41-4889-879b-b160d57aaa3c/pitch_analyzer_mockup_1773270302857.png"
+                            alt="Pitch Analyzer" class="v3-img">
+                        <div class="v3-card-overlay">
+                            <span class="v3-badge">DSP • Python</span>
+                        </div>
+                    </div>
+                    <div class="v3-card-content">
+                        <h3 class="v3-title" data-i18n="proj_pitch_title">Vocal Pitch Analyzer</h3>
+                        <p class="v3-desc" data-i18n="proj_pitch_short">Modular real-time DSP engine for frequency
+                            tracking.</p>
+                        <button class="v3-btn case-study-btn" data-project="pitch" data-i18n="btn_view_case">View Case
+                            Study</button>
+                    </div>
+                </div>
+
+                <!-- Project 2: HR Analytics Dashboard -->
+                <div class="v3-card" data-project="hr">
+                    <div class="v3-card-media">
+                        <img src="/Users/sbai/.gemini/antigravity/brain/3c5d310e-8c41-4889-879b-b160d57aaa3c/hr_analytics_mockup_1773270317457.png"
+                            alt="HR Dashboard" class="v3-img">
+                        <div class="v3-card-overlay">
+                            <span class="v3-badge">Data Science</span>
+                        </div>
+                    </div>
+                    <div class="v3-card-content">
+                        <h3 class="v3-title" data-i18n="proj_hr_title">HR Analytics Pipeline</h3>
+                        <p class="v3-desc" data-i18n="proj_hr_short">Modular data pipeline with predictive salary
+                            modeling.</p>
+                        <button class="v3-btn case-study-btn" data-project="hr" data-i18n="btn_view_case">View Case
+                            Study</button>
+                    </div>
+                </div>
+
+                <!-- Project 3: NLP Text Analyzer -->
+                <div class="v3-card" data-project="nlp">
+                    <div class="v3-card-media">
+                        <img src="/Users/sbai/.gemini/antigravity/brain/3c5d310e-8c41-4889-879b-b160d57aaa3c/nlp_analyzer_mockup_1773270332532.png"
+                            alt="NLP Tool" class="v3-img">
+                        <div class="v3-card-overlay">
+                            <span class="v3-badge">NLP • ML</span>
+                        </div>
+                    </div>
+                    <div class="v3-card-content">
+                        <h3 class="v3-title" data-i18n="proj_nlp_title">NLP Text-Analyzer</h3>
+                        <p class="v3-desc" data-i18n="proj_nlp_short">Local Sentiment Analysis & metrics for massive
+                            text datasets.</p>
+                        <button class="v3-btn case-study-btn" data-project="nlp" data-i18n="btn_view_case">View Case
+                            Study</button>
+                    </div>
+                </div>
+
+                <!-- Project 4: Champions League Simulator -->
+                <div class="v3-card wide" data-project="cl">
+                    <div class="v3-card-media">
+                        <img src="/Users/sbai/.gemini/antigravity/brain/3c5d310e-8c41-4889-879b-b160d57aaa3c/champions_league_mockup_1773270348507.png"
+                            alt="CL Simulator" class="v3-img">
+                        <div class="v3-card-overlay">
+                            <span class="v3-badge">Simulation • AI</span>
+                        </div>
+                    </div>
+                    <div class="v3-card-content">
+                        <h3 class="v3-title" data-i18n="proj_cl_title">UCL Simulator v2</h3>
+                        <p class="v3-desc" data-i18n="proj_cl_short">AI-driven tournament simulation with betting
+                            mechanics.</p>
+                        <button class="v3-btn case-study-btn" data-project="cl" data-i18n="btn_view_case">View Case
+                            Study</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Case Study Overlay (Full-screen Immersive) -->
+    <div class="case-study-overlay" id="case-study-overlay">
+        <div class="overlay-backdrop"></div>
+        <div class="case-study-container">
+            <button class="close-overlay"><i class="fas fa-times"></i></button>
+            <div class="case-study-content">
+                <div class="case-study-header">
+                    <h2 id="cs-title">Project Title</h2>
+                    <div class="cs-tags" id="cs-tags"></div>
+                </div>
+                <div class="case-study-grid">
+                    <div class="cs-image-panel">
+                        <img id="cs-image" src="" alt="Project Visual">
+                    </div>
+                    <div class="cs-details-panel">
+                        <div class="cs-section">
+                            <h4 id="label-problem" data-i18n="cs_problem">The Problem</h4>
+                            <p id="cs-problem">Detailed problem description...</p>
+                        </div>
+                        <div class="cs-section">
+                            <h4 id="label-solution" data-i18n="cs_solution">The Solution</h4>
+                            <p id="cs-solution">Detailed solution description...</p>
+                        </div>
+                        <div class="cs-section">
+                            <h4 id="label-tech" data-i18n="cs_tech">Technical Stack</h4>
+                            <div class="cs-stack" id="cs-stack"></div>
+                        </div>
+                        <div class="cs-footer">
+                            <a id="cs-github" href="#" target="_blank" class="btn btn-primary">
+                                <i class="fab fa-github"></i> <span data-i18n="btn_view_github">View Repository</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact section box-bg" id="contact">
+        <div class="contact-content">
+            <h2 class="section-title" data-i18n="contact_title">Let's Connect</h2>
+            <p class="contact-desc" data-i18n="contact_desc">I'm currently looking for new opportunities, analyzing
+                datasets, or learning new algorithms. My inbox is always open.</p>
+            <a href="mailto:Sbaia1870@gmail.com" class="btn btn-primary btn-large" data-i18n="btn_hello">Say
+                Hello</a>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/ahmadsbai/" target="_blank" rel="noopener noreferrer"
+                    class="social-link">LinkedIn</a>
+                <a href="https://github.com/unknownahmad" target="_blank" rel="noopener noreferrer"
+                    class="social-link">GitHub</a>
+                <a href="https://www.kaggle.com/ahmadsbai" target="_blank" rel="noopener noreferrer"
+                    class="social-link">Kaggle</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Ahmad Sbai<span class="dot">.</span></div>
+            <p class="footer-copy">© 2026 Ahmad Sbai. <span data-i18n="footer_rights">All rights
+                    reserved.</span></p>
+        </div>
+    </footer>
+
+    <!-- GSAP for interactive animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
