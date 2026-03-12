@@ -1591,7 +1591,7 @@ h6 {
     }
 
     .hero {
-        padding-top: 2rem; /* Extremely tight top padding */
+        padding-top: 80px; /* Crucial to clear fixed navbar */
         padding-bottom: 2rem;
         justify-content: center;
         text-align: center;
@@ -1599,6 +1599,7 @@ h6 {
         height: auto;
         flex-direction: column;
         align-items: center;
+        gap: 0.5rem; /* Override Desktop gap that pushes every unwrapped item apart */
     }
 
     .hero-content {
@@ -1611,25 +1612,25 @@ h6 {
     }
 
     .hero-greeting { order: 1; margin-bottom: 0; font-size: 1rem; }
-    .hero-name { order: 2; margin-bottom: 0.2rem; font-size: clamp(1.8rem, 7vw, 2.5rem); } /* Even smaller */
+    .hero-name { order: 2; margin-bottom: 0; font-size: clamp(2rem, 8vw, 2.5rem); }
     .hero-role { order: 3; margin-bottom: 0; font-size: 0.9rem; }
 
     .hero-visual {
         order: 4;
         min-width: 100%;
-        margin: 1rem 0; /* Tight margins */
+        margin: 0.5rem 0; /* Minimal margins */
         display: flex;
         justify-content: center;
         padding: 0;
     }
 
     .id-card-wrapper {
-        width: 160px; /* Force an extremely small physical footprint */
+        width: 150px; /* Safely restore to an Apple-proportioned size since layout is fixed */
     }
 
     .id-hint {
         font-size: 0.65rem;
-        margin-top: 0.3rem;
+        margin-top: 0.2rem;
     }
 
     .hero-actions {
@@ -1638,19 +1639,19 @@ h6 {
         width: 100%;
         gap: 0.8rem;
         justify-content: center;
-        margin-top: 0; /* Removed top margin */
+        margin-top: 0;
     }
 
     .hero-actions .btn {
         width: auto;
         flex: 1;
-        padding: 0.7rem 0.5rem; /* Tighter padding */
-        font-size: 0.8rem;
+        padding: 0.7rem 0.5rem;
+        font-size: 0.85rem;
     }
 
     .hero-socials {
         order: 6;
-        margin-top: 0.5rem; /* Tighter */
+        margin-top: 0.5rem;
         gap: 1.5rem;
     }
 
