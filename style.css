@@ -1591,7 +1591,7 @@ h6 {
     }
 
     .hero {
-        padding-top: 80px; /* Crucial to clear fixed navbar */
+        padding-top: 60px; /* Reduced to pull content up a bit closer to navbar */
         padding-bottom: 2rem;
         justify-content: center;
         text-align: center;
@@ -1625,7 +1625,7 @@ h6 {
     }
 
     .id-card-wrapper {
-        width: 150px; /* Safely restore to an Apple-proportioned size since layout is fixed */
+        width: 110px; /* Shrink to ensure fit even with Safari bottom bar */
     }
 
     .id-hint {
@@ -1637,7 +1637,7 @@ h6 {
         order: 5;
         flex-direction: row;
         width: 100%;
-        gap: 0.8rem;
+        gap: 0.6rem;
         justify-content: center;
         margin-top: 0;
     }
@@ -1645,14 +1645,14 @@ h6 {
     .hero-actions .btn {
         width: auto;
         flex: 1;
-        padding: 0.7rem 0.5rem;
-        font-size: 0.85rem;
+        padding: 0.6rem 0.4rem;
+        font-size: 0.8rem;
     }
 
     .hero-socials {
         order: 6;
         margin-top: 0.5rem;
-        gap: 1.5rem;
+        gap: 1.2rem;
     }
 
     /* Disable custom cursor on mobile to use touch */
