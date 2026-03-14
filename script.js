@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const idCard = document.getElementById('id-card');
 
 if (idCard) {
-    // 1. 3D Tilt Effect
+    // 1. 3D Tilt Effect - Using CSS Variables to prevent overwriting base CSS transforms
     idCard.addEventListener('mousemove', (e) => {
         const rect = idCard.getBoundingClientRect();
         const x = e.clientX - rect.left;
@@ -242,16 +242,17 @@ if (idCard) {
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
 
-        // Adjust tilt sensitivity
         const rotateX = (centerY - y) / 10;
         const rotateY = (x - centerX) / 10;
 
-        idCard.style.transform = `perspective(2000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        idCard.style.setProperty('--rotate-x', `${rotateX}deg`);
+        idCard.style.setProperty('--rotate-y', `${rotateY}deg`);
     });
 
     // 2. Reset tilt on mouse leave
     idCard.addEventListener('mouseleave', () => {
-        idCard.style.transform = 'perspective(2000px) rotateX(0deg) rotateY(0deg)';
+        idCard.style.setProperty('--rotate-x', `0deg`);
+        idCard.style.setProperty('--rotate-y', `0deg`);
     });
 
     // 3. Flip on click

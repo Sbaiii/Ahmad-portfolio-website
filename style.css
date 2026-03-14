@@ -937,6 +937,19 @@ h6 {
     pointer-events: none;
 }
 
+/* Base ID Card Wrapper Styles */
+.id-card-wrapper {
+    width: 320px;
+    aspect-ratio: 1 / 1.58;
+    /* PVC Card Ratio */
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+    z-index: 10;
+    transform: perspective(2000px) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg));
+}
+
 /* Responsive Dashboard */
 @media (max-width: 850px) {
     .apple-dashboard {
@@ -1708,68 +1721,69 @@ h6 {
     }
 
     .hero {
-        padding-top: 60px; /* Reduced to pull content up a bit closer to navbar */
+        padding-top: 80px; /* Space for navbar */
         padding-bottom: 2rem;
         justify-content: center;
         text-align: center;
-        min-height: unset; /* Remove any 100vh constraints */
+        min-height: unset;
         height: auto;
         flex-direction: column;
         align-items: center;
-        gap: 0.5rem; /* Override Desktop gap that pushes every unwrapped item apart */
+        gap: 0;
+        overflow: hidden;
     }
 
     .hero-content {
-        display: contents; /* Unwraps for flex order control on mobile */
+        display: contents; /* UNWRAP so flex order works on children */
     }
 
-    /* Restore animation for unwrapped children */
+    /* Restore animation */
     .hero-greeting, .hero-name, .hero-role, .hero-actions, .hero-socials {
         animation: fadeInUp 1s ease-out 0.2s backwards;
     }
 
     .hero-greeting { order: 1; margin-bottom: 0; font-size: 1rem; }
     .hero-name { order: 2; margin-bottom: 0; font-size: clamp(2rem, 8vw, 2.5rem); }
-    .hero-role { order: 3; margin-bottom: 0; font-size: 0.9rem; }
+    .hero-role { order: 3; margin-bottom: 0; font-size: 0.9rem; z-index: 20; }
 
     .hero-visual {
         order: 4;
         min-width: 100%;
-        margin: 0.5rem 0; /* Minimal margins */
+        margin: 0; 
+        margin-bottom: -8rem; /* Aggressive collapse of scaled card space */
         display: flex;
         justify-content: center;
+        align-items: center;
         padding: 0;
     }
 
     .id-card-wrapper {
-        width: 90px; /* Ultra-compact to guarantee fit on small screens with large bottom bars */
+        width: 320px; 
+        transform: scale(0.60) perspective(2000px) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg)); /* Clean visibly smaller scale, safe from JS override */
+        transform-origin: center top;
+        margin-top: 1rem; /* Push down to clear the name text */
     }
 
-    .id-hint {
-        font-size: 0.65rem;
-        margin-top: 0.2rem;
-    }
 
     .hero-actions {
         order: 5;
         flex-direction: row;
         width: 100%;
-        gap: 0.6rem;
+        gap: 0.8rem;
         justify-content: center;
-        margin-top: 0;
+        margin-top: 1rem;
+        z-index: 20; /* Ensure clickable above scaled card space */
     }
 
     .hero-actions .btn {
         width: auto;
         flex: 1;
-        padding: 0.6rem 0.4rem;
-        font-size: 0.8rem;
+        padding: 0.7rem 0.5rem;
+        font-size: 0.85rem;
     }
 
     .hero-socials {
-        order: 6;
-        margin-top: 0.5rem;
-        gap: 1.2rem;
+        display: none; /* Hide on mobile to prioritize CTA buttons in limited vertical space */
     }
 
     /* Disable custom cursor on mobile to use touch */
@@ -1837,18 +1851,6 @@ h6 {
     gap: 1.5rem;
     animation: fadeInScale 1s ease-out;
 }
-
-.id-card-wrapper {
-    width: 320px;
-    aspect-ratio: 1 / 1.58;
-    /* PVC Card Ratio */
-    cursor: pointer;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.1s ease-out;
-    z-index: 10;
-}
-
 .id-card-inner {
     position: relative;
     width: 100%;
@@ -2095,13 +2097,6 @@ h6 {
     font-weight: 400;
 }
 
-.id-hint {
-    font-size: 0.8rem;
-    opacity: 0.4;
-    margin-top: 1rem;
-    letter-spacing: 0.05em;
-    animation: breathe 3s infinite ease-in-out;
-}
 
 @keyframes breathe {
 
