@@ -1721,16 +1721,17 @@ h6 {
     }
 
     .hero {
-        padding-top: 80px; /* Space for navbar */
-        padding-bottom: 2rem;
+        padding-top: clamp(60px, 8vh, 80px); /* Tighter top space */
+        padding-bottom: 0;
         justify-content: center;
         text-align: center;
-        min-height: unset;
-        height: auto;
+        min-height: 100svh; /* Exact viewport fit */
+        height: 100svh;
         flex-direction: column;
         align-items: center;
         gap: 0;
-        overflow: hidden;
+        overflow: hidden; /* Prevent bleed */
+        position: relative;
     }
 
     .hero-content {
@@ -1742,15 +1743,15 @@ h6 {
         animation: fadeInUp 1s ease-out 0.2s backwards;
     }
 
-    .hero-greeting { order: 1; margin-bottom: 0; font-size: 1rem; }
-    .hero-name { order: 2; margin-bottom: 0; font-size: clamp(2rem, 8vw, 2.5rem); }
-    .hero-role { order: 3; margin-bottom: 0; font-size: 0.9rem; z-index: 20; }
+    .hero-greeting { order: 1; margin-bottom: 0.2rem; font-size: 0.9rem; }
+    .hero-name { order: 2; margin-bottom: 0; font-size: clamp(1.8rem, 7vw, 2.2rem); }
+    .hero-role { order: 3; margin-bottom: 0.5rem; font-size: 0.85rem; z-index: 20; }
 
     .hero-visual {
         order: 4;
         min-width: 100%;
         margin: 0; 
-        margin-bottom: -12rem; /* Much deeper collapse for the 0.45 scale space */
+        margin-bottom: -10.5rem; /* Balanced collapse for 0.55 scale */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1759,35 +1760,35 @@ h6 {
 
     .id-card-wrapper {
         width: 320px; 
-        transform: scale(0.45) perspective(2000px) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg)); /* Even smaller scale so socials fit */
+        transform: scale(0.55) perspective(2000px) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg)); /* Optimized scale */
         transform-origin: center top;
-        margin-top: 1rem; /* Push down to clear the name text */
+        margin-top: 0.5rem;
     }
 
 
     .hero-actions {
         order: 5;
         flex-direction: row;
-        width: 100%;
-        gap: 0.6rem; /* Tighter gap */
+        width: 90%;
+        gap: 0.5rem; 
         justify-content: center;
-        margin-top: 0.5rem; /* Pulled up closer to card */
-        z-index: 20; /* Ensure clickable above scaled card space */
+        margin-top: 0.4rem;
+        z-index: 20;
     }
 
     .hero-actions .btn {
         width: auto;
         flex: 1;
-        padding: 0.7rem 0.5rem;
-        font-size: 0.85rem;
+        padding: 0.6rem 0.4rem;
+        font-size: 0.8rem;
     }
 
     .hero-socials {
         order: 6;
         display: flex;
         justify-content: center;
-        gap: 1.2rem;
-        margin-top: 1rem;
+        gap: 1.5rem;
+        margin-top: 0.8rem;
         z-index: 20;
     }
 
