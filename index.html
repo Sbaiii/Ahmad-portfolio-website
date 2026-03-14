@@ -11,27 +11,27 @@
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="Ahmad Sbai - Data Scientist & Engineer">
     <meta itemprop="description" content="Technical Solutions Engineer & Data Science Student Portfolio - Ahmad Sbai">
-    <meta itemprop="image" content="https://sbaiii.com/assets/favicon.png">
+    <meta itemprop="image" content="https://ahmadsbai.com/assets/favicon.png">
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://sbaiii.com">
+    <meta property="og:url" content="https://ahmadsbai.com">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Ahmad Sbai - Data Scientist & Engineer">
     <meta property="og:description"
         content="Technical Solutions Engineer & Data Science Student Portfolio - Ahmad Sbai">
-    <meta property="og:image" content="https://sbaiii.com/assets/favicon.png">
+    <meta property="og:image" content="https://ahmadsbai.com/assets/favicon.png">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ahmad Sbai - Data Scientist & Engineer">
     <meta name="twitter:description"
         content="Technical Solutions Engineer & Data Science Student Portfolio - Ahmad Sbai">
-    <meta name="twitter:image" content="https://sbaiii.com/assets/favicon.png">
+    <meta name="twitter:image" content="https://ahmadsbai.com/assets/favicon.png">
 
     <!-- Favicon & App Icons -->
-    <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="assets/favicon.png" sizes="16x16">
-    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="icon" type="image/png" href="assets/as_logo_modern.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/as_logo_modern.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="assets/as_logo_modern.png">
     <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#0a0a0a">
     <link rel="stylesheet" href="style.css">
@@ -48,11 +48,23 @@
 
     <!-- Custom Cursor -->
     <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
+    <div class="cursor-trail" data-cursor-trail>
+        <!-- Trail segments will be managed by JS for dynamic control, 
+             but we can pre-define a few for structure if needed. 
+             However, a clean container is better. -->
+    </div>
 
     <!-- Navigation -->
     <header class="header">
-        <div class="logo">Ahmad Sbai<span class="dot">.</span></div>
+        <a href="#home" class="logo-wrapper">
+            <div class="logo-icon">
+                <img src="assets/as_logo_modern.png" alt="AS Logo">
+            </div>
+            <div class="logo-text">
+                <span class="first-name">Ahmad</span>
+                <span class="last-name">Sbai</span>
+            </div>
+        </a>
         <nav class="nav-links">
             <a href="#about" data-i18n="nav_about">About</a>
             <a href="#experience" data-i18n="nav_experience">Experience</a>
@@ -262,6 +274,14 @@
                                 <div class="core-ring ring-1"></div>
                                 <div class="core-ring ring-2"></div>
                                 <div class="core-ring ring-3"></div>
+                                <div class="core-ring ring-4"></div>
+                                <div class="core-ring ring-5"></div>
+                                
+                                <!-- Floating Data Nodes -->
+                                <div class="data-node node-1">NLP</div>
+                                <div class="data-node node-2">BERT</div>
+                                <div class="data-node node-3">CNN</div>
+                                <div class="data-node node-4">RNN</div>
                             </div>
                             
                             <div class="core-metrics">
@@ -273,11 +293,15 @@
                                     <div class="metric-value">0.12s</div>
                                     <div class="metric-label">Inference Latency</div>
                                 </div>
+                                <div class="core-metric-card glass-card">
+                                    <div class="metric-value">4.2B</div>
+                                    <div class="metric-label">Parameters</div>
+                                </div>
                             </div>
 
                             <div class="nebula-label">
-                                <h3 class="focus-text">Neural Core</h3>
-                                <p class="bento-label">Abstract Intelligence Architecture Visualization</p>
+                                <h3 class="focus-text" data-i18n="nexus_title">Neural Core</h3>
+                                <p class="bento-label" data-i18n="nexus_subtitle">Deep Learning & NLP Architecture</p>
                             </div>
                         </div>
                     </div>

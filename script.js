@@ -9,38 +9,77 @@ document.addEventListener('DOMContentLoaded', () => {
        CUSTOM CURSOR
        ========================================= */
     const cursorDot = document.querySelector('[data-cursor-dot]');
-    const cursorOutline = document.querySelector('[data-cursor-outline]');
+    const cursorTrail = document.querySelector('[data-cursor-trail]');
+    const trailSegments = [];
+    const segmentCount = 20; // Number of trail dots
+    const positions = []; // Mouse position history
 
     // Check if device supports hover
     const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
-    if (!isTouchDevice && cursorDot && cursorOutline) {
+    if (!isTouchDevice && cursorDot && cursorTrail) {
+        // Create segments
+        for (let i = 0; i < segmentCount; i++) {
+            const segment = document.createElement('div');
+            segment.classList.add('cursor-trail-segment');
+            cursorTrail.appendChild(segment);
+            trailSegments.push(segment);
+            positions.push({ x: 0, y: 0 });
+        }
+
         window.addEventListener('mousemove', (e) => {
             const posX = e.clientX;
             const posY = e.clientY;
 
-            // Instantly move dot
-            cursorDot.style.left = `${posX}px`;
-            cursorDot.style.top = `${posY}px`;
+            // Move the primary dot instantly
+            gsap.to(cursorDot, {
+                x: posX,
+                y: posY,
+                duration: 0
+            });
 
-            // Smoothly animate outline
-            cursorOutline.animate({
-                left: `${posX}px`,
-                top: `${posY}px`
-            }, { duration: 500, fill: 'forwards' });
+            // Update position history
+            positions.push({ x: posX, y: posY });
+            if (positions.length > segmentCount) {
+                positions.shift();
+            }
+
+            // Animate segments with a lag
+            trailSegments.forEach((segment, index) => {
+                const pos = positions[positions.length - 1 - index] || positions[0];
+                const opacity = 1 - (index / segmentCount);
+                const scale = 1 - (index / segmentCount * 0.8);
+
+                gsap.to(segment, {
+                    x: pos.x,
+                    y: pos.y,
+                    opacity: opacity,
+                    scale: scale,
+                    duration: 0.1 + (index * 0.02),
+                    ease: "power2.out"
+                });
+            });
         });
 
-        // Hover effects for anchors and buttons
-        const interactables = document.querySelectorAll('a, button, input, .lang-selector');
+        // Hover effects for interactables
+        const interactables = document.querySelectorAll('a, button, input, .lang-selector, .social-icon, .nav-item, .project-card, .logo-wrapper');
         interactables.forEach(el => {
             el.addEventListener('mouseenter', () => {
-                cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-                cursorOutline.style.backgroundColor = 'rgba(128, 128, 128, 0.2)';
+                cursorDot.classList.add('hovered');
+                gsap.to(trailSegments, { opacity: 0, duration: 0.2 }); // Hide trail on hover
             });
             el.addEventListener('mouseleave', () => {
-                cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
-                cursorOutline.style.backgroundColor = 'transparent';
+                cursorDot.classList.remove('hovered');
+                gsap.to(trailSegments, { opacity: (i) => 1 - (i / segmentCount), duration: 0.2 });
             });
+        });
+
+        // Hide cursor when leaving window
+        document.addEventListener('mouseleave', () => {
+            gsap.to([cursorDot, ...trailSegments], { opacity: 0, duration: 0.3 });
+        });
+        document.addEventListener('mouseenter', () => {
+            gsap.to(cursorDot, { opacity: 1, duration: 0.3 });
         });
     }
 

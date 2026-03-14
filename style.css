@@ -112,9 +112,9 @@ h6 {
 
 /* Custom Cursor */
 .cursor-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--cursor-color);
+    width: 6px;
+    height: 6px;
+    background-color: var(--text-primary);
     position: fixed;
     top: 0;
     left: 0;
@@ -122,13 +122,13 @@ h6 {
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 300001;
-    /* Above overlays */
+    /* Above everything */
 }
 
-.cursor-outline {
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--cursor-color);
+.cursor-trail-segment {
+    width: 6px;
+    height: 6px;
+    background-color: var(--text-primary);
     position: fixed;
     top: 0;
     left: 0;
@@ -136,8 +136,16 @@ h6 {
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 300000;
-    /* Above overlays */
-    transition: width 0.2s, height 0.2s, background-color 0.2s;
+    opacity: 0; /* Managed by JS */
+}
+
+.cursor-dot.hovered {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(var(--text-primary-rgb, 255, 255, 255), 0.1);
+    border: 1px solid rgba(var(--text-primary-rgb, 255, 255, 255), 0.2);
+    backdrop-filter: blur(4px);
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
 }
 
 /* Header & Nav */
@@ -164,15 +172,66 @@ h6 {
     background-color: rgba(var(--bg-primary), 0.95);
 }
 
-.logo {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-    font-weight: 700;
-    letter-spacing: -0.04em;
-    white-space: nowrap;
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all var(--transition-medium);
 }
 
-.dot {
-    color: #888;
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-medium);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-text {
+    display: flex;
+    gap: 0.3rem;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+}
+
+.first-name {
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.last-name {
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+/* Hover Animations */
+.logo-wrapper:hover .logo-icon {
+    transform: rotate(-5deg) scale(1.1);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 15px rgba(var(--accent-rgb), 0.3);
+}
+
+.logo-wrapper:hover .logo-text {
+    letter-spacing: 0.05em;
+    transition: letter-spacing 0.4s var(--ease-out);
+}
+
+.logo-wrapper:hover .first-name {
+    opacity: 1;
 }
 
 .nav-links {
@@ -698,81 +757,75 @@ h6 {
 }
 
 .data-core-wrapper {
-    position: absolute;
-    inset: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .core-orb-container {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 300px;
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .core-orb {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 60px 10px var(--accent);
-    z-index: 5;
-    animation: orbPulse 4s ease-in-out infinite alternate;
-}
-
-@keyframes orbPulse {
-    0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.8; box-shadow: 0 0 40px 5px var(--accent); }
-    100% { transform: translate(-50%, -50%) scale(1.05); opacity: 1; box-shadow: 0 0 80px 15px var(--accent); }
+    background: var(--text-primary);
+    box-shadow: 0 0 40px 10px rgba(var(--text-primary-rgb, 255, 255, 255), 0.4);
+    z-index: 10;
+    animation: orbPulse 3s ease-in-out infinite alternate;
 }
 
 .core-ring {
     position: absolute;
     border-radius: 50%;
     border: 1px solid var(--border-color);
-    top: 50%;
-    left: 50%;
+    opacity: 0.3;
 }
 
-.ring-1 {
-    width: 140px;
-    height: 140px;
-    margin-top: -70px;
-    margin-left: -70px;
-    border-top-color: var(--accent);
-    border-width: 2px;
-    animation: spin 8s linear infinite;
+.ring-1 { width: 100px; height: 100px; animation: spin 10s linear infinite; border-top: 2px solid var(--text-primary); }
+.ring-2 { width: 160px; height: 160px; animation: spinReverse 15s linear infinite; border-right: 1px dashed var(--text-primary); }
+.ring-3 { width: 220px; height: 220px; animation: spin 20s linear infinite; border-left: 1px dotted var(--text-primary); }
+.ring-4 { width: 280px; height: 280px; animation: spinReverse 25s linear infinite; border-bottom: 1px solid var(--text-primary); opacity: 0.1; }
+.ring-5 { width: 340px; height: 340px; animation: spin 35s linear infinite; border-left: 2px solid var(--text-primary); opacity: 0.05; }
+
+/* Data Nodes */
+.data-node {
+    position: absolute;
+    padding: 4px 10px;
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-family: monospace;
+    color: var(--text-primary);
+    animation: floatNode 6s ease-in-out infinite;
+    z-index: 15;
 }
 
-.ring-2 {
-    width: 200px;
-    height: 200px;
-    margin-top: -100px;
-    margin-left: -100px;
-    border-right-color: var(--accent);
-    border-bottom-color: var(--text-secondary);
-    border-style: dashed;
-    border-width: 1px;
-    animation: spinReverse 15s linear infinite;
+.node-1 { top: 10%; right: 10%; animation-delay: 0s; }
+.node-2 { bottom: 20%; left: 15%; animation-delay: 1.5s; }
+.node-3 { top: 25%; left: 10%; animation-delay: 3s; }
+.node-4 { bottom: 10%; right: 20%; animation-delay: 4.5s; }
+
+@keyframes floatNode {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-15px) translateX(10px); }
 }
 
-.ring-3 {
-    width: 260px;
-    height: 260px;
-    margin-top: -130px;
-    margin-left: -130px;
-    border-left-color: var(--accent);
-    border-style: dotted;
-    border-width: 2px;
-    opacity: 0.5;
-    animation: spin 25s linear infinite;
+@keyframes orbPulse {
+    0% { transform: scale(0.9); opacity: 0.7; box-shadow: 0 0 20px rgba(var(--text-primary-rgb, 255, 255, 255), 0.2); }
+    100% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 60px rgba(var(--text-primary-rgb, 255, 255, 255), 0.6); }
 }
 
 @keyframes spin { 100% { transform: rotate(360deg); } }
@@ -780,55 +833,62 @@ h6 {
 
 .core-metrics {
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
+    top: 2rem;
+    right: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-    z-index: 10;
+    gap: 1rem;
+    z-index: 20;
 }
 
 .core-metric-card {
-    background: var(--surface);
-    opacity: 0.8;
+    background: rgba(var(--surface-rgb, 20, 20, 20), 0.6);
     backdrop-filter: blur(10px);
     border: 1px solid var(--border-color);
-    padding: 0.8rem 1.2rem;
+    padding: 10px 15px;
     border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    animation: fadeInRight 1s ease-out backwards;
+    min-width: 140px;
+    transition: transform 0.3s ease;
 }
 
-.core-metrics .core-metric-card:nth-child(2) {
-    animation-delay: 0.2s;
+.core-metric-card:hover {
+    transform: translateX(-5px);
+    border-color: var(--text-primary);
 }
 
 .metric-value {
+    font-size: 1.4rem;
+    font-weight: 700;
     color: var(--text-primary);
-    font-size: 1.2rem;
-    font-weight: 600;
-    font-family: monospace;
+    line-height: 1;
 }
 
 .metric-label {
-    font-size: 0.65rem;
-    color: var(--text-secondary);
+    font-size: 0.7rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
     margin-top: 4px;
 }
 
 .nebula-label {
-    position: relative;
-    z-index: 10;
-    background: var(--surface);
-    opacity: 0.8;
-    backdrop-filter: blur(20px);
-    width: 100%;
-    padding: 1.5rem;
-    border-top: 1px solid var(--border-color);
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 20;
+}
+
+.focus-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    color: var(--text-primary);
+}
+
+.bento-label {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    color: var(--text-secondary);
 }
 
 /* Schematic Education (System Node Layout) */
@@ -1266,7 +1326,7 @@ h6 {
 /* =========================================
    PROJECT MOSAIC & CASE STUDY OVERLAY
    =========================================/* =========================================
-   PROJECTS SHOWCASE (sbaiii.com style)
+   PROJECTS SHOWCASE (ahmadsbai.com style)
    ========================================= */
 .projects-grid {
     display: grid;
