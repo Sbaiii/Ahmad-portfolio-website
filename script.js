@@ -332,6 +332,11 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
    PROJECT CASE STUDY ENGINE
    ========================================= */
 const projectStaticData = {
+    songs: {
+        image: "./assets/songs_abstract.png",
+        stack: ["Python", "Pandas", "Spotify API", "Plotly", "Time-Series Analysis"],
+        github: "https://github.com/unknownahmad/Did-Streaming-Break-How-Songs-Are-Built-"
+    },
     pitch: {
         image: "./assets/pitch_abstract.png",
         stack: ["Python", "DSP", "Threading", "Matplotlib", "NumPy"],

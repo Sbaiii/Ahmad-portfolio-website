@@ -48,6 +48,7 @@ const translations = {
         proj_hr_title: "HR Analytics Pipeline",
         proj_nlp_title: "NLP Text-Analyzer",
         proj_cl_title: "UCL Simulator v2",
+        proj_songs_title: "Music Evolution & Streaming",
         skill_cat_data: "Data & Analytics",
         skill_cat_eng: "Engineering & Architecture",
         skill_cat_soft: "Software Development",
@@ -55,6 +56,7 @@ const translations = {
         proj_hr_short: "Modular data pipeline with predictive salary modeling.",
         proj_nlp_short: "Local Sentiment Analysis & metrics for massive text datasets.",
         proj_cl_short: "AI-driven tournament simulation with betting mechanics.",
+        proj_songs_short: "Data Science analysis on how streaming platforms reshaped music architecture.",
         cs_problem: "The Problem",
         cs_solution: "The Solution",
         cs_highlight: "Engineering Highlights",
@@ -66,6 +68,12 @@ const translations = {
         btn_hello: "Say Hello",
         footer_rights: "All rights reserved.",
         projects_data: {
+            songs: {
+                title: "Did Streaming Break Music?",
+                problem: "Streaming platforms have fundamentally changed how music is consumed, leading to shorter songs and faster hooks. Quantifying this shift across millions of tracks requires robust data analysis rather than anecdotal evidence.",
+                solution: "Developed a comprehensive data science pipeline to analyze structural changes in music over decades. Leveraged Large-Scale Data Processing to identify trends in song length, intro duration, and chorus timing.",
+                highlight: "Engineered a data ingestion script to process massive Spotify datasets. Applied time-series analysis to track structural evolution and visualized the 'Skip Rate' optimization paradox using custom Plotly dashboards."
+            },
             pitch: {
                 title: "Vocal Pitch Analyzer",
                 problem: "Achieving millisecond-precision pitch tracking in real-world environments often results in high CPU overhead and signal latency, making real-time analysis difficult without specialized hardware.",
@@ -143,6 +151,7 @@ const translations = {
         proj_hr_title: "Pipeline d'Analyse RH",
         proj_nlp_title: "Analyseur de Texte NLP",
         proj_cl_title: "Simulateur UCL v2",
+        proj_songs_title: "Évolution de la Musique & Streaming",
         skill_cat_data: "Data & Analyse",
         skill_cat_eng: "Ingénierie & Architecture",
         skill_cat_soft: "Développement Logiciel",
@@ -150,6 +159,7 @@ const translations = {
         proj_hr_short: "Pipeline de données modulaire avec modélisation prédictive.",
         proj_nlp_short: "Analyse de sentiment locale et métriques pour textes massifs.",
         proj_cl_short: "Simulation de tournoi IA avec mécanique de pari.",
+        proj_songs_short: "Analyse Data Science sur l'évolution structurelle de la musique à l'ère du streaming.",
         cs_problem: "Le Problème",
         cs_solution: "La Solution",
         cs_highlight: "Points Forts de l'Ingénierie",
@@ -161,6 +171,12 @@ const translations = {
         btn_hello: "Dire Bonjour",
         footer_rights: "Tous droits réservés.",
         projects_data: {
+            songs: {
+                title: "Le Streaming a-t-il brisé la Musique ?",
+                problem: "Les plateformes de streaming ont fondamentalement changé la consommation de musique, menant à des morceaux plus courts. Quantifier ce changement nécessite une analyse de données robuste.",
+                solution: "Développement d'un pipeline data science complet pour analyser les changements structurels de la musique sur plusieurs décennies.",
+                highlight: "Conception d'un script d'ingestion pour traiter des datasets Spotify massifs. Application d'analyses de séries temporelles pour suivre l'évolution structurelle."
+            },
             pitch: {
                 title: "Analyseur de Pitch Vocal",
                 problem: "Atteindre un suivi du pitch avec une précision à la milliseconde dans des environnements réels entraînant souvent une charge CPU élevée et une latence du signal.",
@@ -238,6 +254,7 @@ const translations = {
         proj_hr_title: "Pipeline de Análisis de RRHH",
         proj_nlp_title: "Analizador de Texto NLP",
         proj_cl_title: "Simulador UCL v2",
+        proj_songs_title: "Evolución Musical y Streaming",
         skill_cat_data: "Datos y Analítica",
         skill_cat_eng: "Ingeniería y Arquitectura",
         skill_cat_soft: "Desarrollo de Software",
@@ -245,6 +262,7 @@ const translations = {
         proj_hr_short: "Pipeline de datos modular con modelado predictivo.",
         proj_nlp_short: "Análisis de sentimiento local y métricas para textos masivos.",
         proj_cl_short: "Simulación de torneo IA con mecánica de apuestas.",
+        proj_songs_short: "Análisis de Data Science sobre cómo las plataformas de streaming rediseñaron la música.",
         cs_problem: "El Problema",
         cs_solution: "La Solución",
         cs_tech: "Stack Técnico",
@@ -255,6 +273,12 @@ const translations = {
         btn_hello: "Saludar",
         footer_rights: "Todos los derechos reservados.",
         projects_data: {
+            songs: {
+                title: "¿El Streaming rompió la música?",
+                problem: "Las plataformas de streaming han cambiado fundamentalmente cómo se consume la música, llevando a canciones más cortas. Cuantificar este cambio requiere un análisis de datos robusto.",
+                solution: "Desarrollo de un pipeline de ciencia de datos completo para analizar los cambios estructurales en la música a lo largo de décadas.",
+                highlight: "Diseño de un script de ingestión de datos para procesar conjuntos de datos masivos de Spotify. Aplicación de análisis de series temporales."
+            },
             pitch: {
                 title: "Analizador de Pitch Vocal",
                 problem: "Lograr un seguimiento del pitch con precisión de milisegundos en entornos reales a menudo resulta en una alta carga de CPU y latencia de señal.",
