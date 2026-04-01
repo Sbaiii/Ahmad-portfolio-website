@@ -41,7 +41,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
     <!-- Performance Preloads -->
-    <link rel="preload" href="assets/profile-pic-curly.png" as="image">
+    <link rel="preload" href="assets/profile-pic-curly.png?v=3" as="image">
 </head>
 
 <body>
@@ -118,20 +118,20 @@
                         <div class="card-gloss"></div>
                         <div class="card-header">
                             <div class="brand-group">
-                                <h2 class="brand-title">HARBOUR.SPACE</h2>
-                                <p class="brand-sub">INSTITUTE OF TECHNOLOGY</p>
+                                <h2 class="brand-title" data-i18n="id_brand_title">HARBOUR.SPACE</h2>
+                                <p class="brand-sub" data-i18n="id_brand_sub">INSTITUTE OF TECHNOLOGY</p>
                             </div>
                         </div>
 
                         <div class="card-pvc-body">
                             <div class="portrait-ring">
                                 <div class="portrait-image">
-                                    <img src="assets/profile-pic-curly.png" alt="Ahmad Sbai" class="id-photo">
+                                    <img src="assets/profile-pic-curly.png?v=3" alt="Ahmad Sbai" class="id-photo">
                                 </div>
                                 <div class="scanner-line"></div>
                             </div>
                             <div class="id-info">
-                                <span class="role-badge">STUDENT</span>
+                                <span class="role-badge" data-i18n="id_role_badge">STUDENT</span>
                                 <h3 class="id-name">Ahmad Sbai</h3>
                             </div>
                         </div>
@@ -141,13 +141,13 @@
                     <div class="id-card-back">
                         <div class="card-gloss"></div>
                         <div class="back-header">
-                            <div class="brand-logo-small">HARBOUR.SPACE</div>
-                            <div class="back-title">INSTITUTE OF TECHNOLOGY</div>
+                            <div class="brand-logo-small" data-i18n="id_brand_title">HARBOUR.SPACE</div>
+                            <div class="back-title" data-i18n="id_brand_sub">INSTITUTE OF TECHNOLOGY</div>
                         </div>
 
                         <div class="back-content minimal">
                             <h3 class="back-name">Ahmad Sbai</h3>
-                            <div class="serial-no">Future Data Scientist</div>
+                            <div class="serial-no" data-i18n="id_serial_no">Future Data Scientist</div>
                         </div>
 
                         <div class="back-footer">
@@ -587,6 +587,25 @@
                 <p class="project-desc" data-i18n="proj_cl_short">AI-driven tournament simulation with betting
                     mechanics.</p>
                 <a href="#" class="btn-text case-study-btn" data-project="cl">
+                    <span data-i18n="btn_view_case">View Case Study</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                </a>
+            </article>
+
+            <!-- Project 5: Nexus Central -->
+            <article class="project-card" data-project="nexus">
+                <div class="project-img-wrapper">
+                    <img src="./assets/nexus_abstract.png" alt="Nexus Central" class="project-img">
+                </div>
+                <div class="project-tags">
+                    <span>Full-Stack</span>
+                    <span>FastAPI</span>
+                </div>
+                <h3 class="project-title" data-i18n="proj_nexus_title">Nexus — Unified Booking</h3>
+                <p class="project-desc" data-i18n="proj_nexus_short">Enterprise-grade resource booking ecosystem featuring a FastAPI backend and Telegram Bot.</p>
+                <a href="#" class="btn-text case-study-btn" data-project="nexus">
                     <span data-i18n="btn_view_case">View Case Study</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M7 17L17 7M17 7H7M17 7V17" />

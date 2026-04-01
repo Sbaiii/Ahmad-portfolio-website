@@ -14,6 +14,10 @@ const translations = {
         btn_contact_info: "Contact Info",
         btn_work: "View My Work",
         btn_contact: "Get in Touch",
+        id_brand_title: "HARBOUR.SPACE",
+        id_brand_sub: "INSTITUTE OF TECHNOLOGY",
+        id_role_badge: "STUDENT",
+        id_serial_no: "Future Data Scientist",
         about_title: "About",
         nexus_title: "Neural Core",
         nexus_subtitle: "Deep Learning & NLP Architecture",
@@ -51,6 +55,7 @@ const translations = {
         proj_nlp_title: "NLP Text-Analyzer",
         proj_cl_title: "UCL Simulator v2",
         proj_songs_title: "Music Evolution & Streaming",
+        proj_nexus_title: "Nexus — Unified Booking",
         skill_cat_data: "Data & Analytics",
         skill_cat_eng: "Engineering & Architecture",
         skill_cat_soft: "Software Development",
@@ -59,6 +64,7 @@ const translations = {
         proj_nlp_short: "Local Sentiment Analysis & metrics for massive text datasets.",
         proj_cl_short: "AI-driven tournament simulation with betting mechanics.",
         proj_songs_short: "Data Science analysis on how streaming platforms reshaped music architecture.",
+        proj_nexus_short: "Enterprise-grade resource booking ecosystem featuring a FastAPI backend and Telegram Bot.",
         cs_problem: "The Problem",
         cs_solution: "The Solution",
         cs_highlight: "Engineering Highlights",
@@ -99,6 +105,12 @@ const translations = {
                 problem: "Creating a realistic sports simulation requires balancing complex state management, data persistence, and intelligent AI decision-making within a unified user experience.",
                 solution: "Architected an OOP-driven tournament simulator with SQLite persistence. Integrated the DeepSeek AI API to power intelligent betting mechanics and realistic match simulations, all within a high-energy GUI.",
                 highlight: "Implemented threaded match simulations to prevent GUI freezing. Secured DeepSeek AI integration for dynamic data loading, established SQLite row persistence for Premium User inheritance logic, and included strict RegEx authentication."
+            },
+            nexus: {
+                title: "Nexus — Unified Booking Ecosystem",
+                problem: "Modern workspace and resource booking often suffer from fragmented interfaces, slow synchronization between mobile users and administrators, and a lack of intelligent conflict resolution.",
+                solution: "Engineered a unified three-tier ecosystem featuring a high-performance FastAPI backend, a seamless Telegram Bot for mobile users, and a robust multi-threaded desktop dashboard for administrative oversight.",
+                highlight: "Implemented a real-time conflict detection engine with 100% accuracy. Integrated automated weather-adjusted scheduling logic and established persistent bot sessions with advanced administrative controls."
             }
         }
     },
@@ -117,6 +129,10 @@ const translations = {
         btn_contact_info: "Infos de Contact",
         btn_work: "Voir Mon Travail",
         btn_contact: "Me Contacter",
+        id_brand_title: "HARBOUR.SPACE",
+        id_brand_sub: "INSTITUT DE TECHNOLOGIE",
+        id_role_badge: "ÉTUDIANT",
+        id_serial_no: "Futur Data Scientist",
         about_title: "À propos",
         nexus_title: "Noyau Neural",
         nexus_subtitle: "Architecture Deep Learning & NLP",
@@ -156,6 +172,7 @@ const translations = {
         proj_nlp_title: "Analyseur de Texte NLP",
         proj_cl_title: "Simulateur UCL v2",
         proj_songs_title: "Évolution de la Musique & Streaming",
+        proj_nexus_title: "Nexus — Réservation Unifiée",
         skill_cat_data: "Data & Analyse",
         skill_cat_eng: "Ingénierie & Architecture",
         skill_cat_soft: "Développement Logiciel",
@@ -164,6 +181,7 @@ const translations = {
         proj_nlp_short: "Analyse de sentiment locale et métriques pour textes massifs.",
         proj_cl_short: "Simulation de tournoi IA avec mécanique de pari.",
         proj_songs_short: "Analyse Data Science sur l'évolution structurelle de la musique à l'ère du streaming.",
+        proj_nexus_short: "Écosystème de réservation de ressources comprenant un backend FastAPI et un Bot Telegram.",
         cs_problem: "Le Problème",
         cs_solution: "La Solution",
         cs_highlight: "Points Forts de l'Ingénierie",
@@ -204,6 +222,12 @@ const translations = {
                 problem: "Créer une simulation sportive réaliste nécessite d'équilibrer une gestion d'état complexe, la persistance des données et une prise de décision IA intelligente.",
                 solution: "Architecture d'un simulateur de tournoi orienté objet avec persistance SQLite. Intégration de l'API IA DeepSeek pour alimenter des mécaniques de paris intelligentes.",
                 highlight: "Implémentation de simulations de matchs threadées pour éviter le blocage de l'interface. Sécurisation de l'intégration IA DeepSeek, établissement de la persistance des lignes SQLite pour la logique d'héritage des utilisateurs premium, et inclusion d'une authentification stricte par RegEx."
+            },
+            nexus: {
+                title: "Nexus — Un Système de Réservation Unifié",
+                problem: "La réservation de ressources souffre souvent d'interfaces fragmentées et d'un manque de synchronisation en temps réel entre les utilisateurs mobiles et les administrateurs.",
+                solution: "Ingénierie d'un écosystème unifié à trois niveaux comprenant un backend FastAPI haute performance, un Bot Telegram pour les utilisateurs et un tableau de bord multi-threadé pour l'administration.",
+                highlight: "Moteur de détection de conflits en temps réel. Intégration d'une logique de planification ajustée à la météo et sessions bot persistantes avec contrôles administratifs avancés."
             }
         }
     },
@@ -222,6 +246,10 @@ const translations = {
         btn_contact_info: "Información de Contacto",
         btn_work: "Ver Mi Trabajo",
         btn_contact: "Ponerse en Contacto",
+        id_brand_title: "HARBOUR.SPACE",
+        id_brand_sub: "INSTITUTO DE TECNOLOGÍA",
+        id_role_badge: "ESTUDIANTE",
+        id_serial_no: "Futuro Científico de Datos",
         about_title: "Sobre Mí",
         nexus_title: "Núcleo Neuronal",
         nexus_subtitle: "Arquitectura de Deep Learning y NLP",
@@ -261,6 +289,7 @@ const translations = {
         proj_nlp_title: "Analizador de Texto NLP",
         proj_cl_title: "Simulador UCL v2",
         proj_songs_title: "Evolución Musical y Streaming",
+        proj_nexus_title: "Nexus — Reserva Unificada",
         skill_cat_data: "Datos y Analítica",
         skill_cat_eng: "Ingeniería y Arquitectura",
         skill_cat_soft: "Desarrollo de Software",
@@ -269,6 +298,7 @@ const translations = {
         proj_nlp_short: "Análisis de sentimiento local y métricas para textos masivos.",
         proj_cl_short: "Simulación de torneo IA con mecánica de apuestas.",
         proj_songs_short: "Análisis de Data Science sobre cómo las plataformas de streaming rediseñaron la música.",
+        proj_nexus_short: "Ecosistema de reserva de recursos con backend FastAPI y Bot de Telegram automatizado.",
         cs_problem: "El Problema",
         cs_solution: "La Solución",
         cs_tech: "Stack Técnico",
@@ -308,6 +338,12 @@ const translations = {
                 problem: "Crear una simulación deportiva realista requiere equilibrar una gestión de estado compleja, persistencia de datos y toma de decisiones inteligente por IA.",
                 solution: "Arquitectó un simulador de torneos orientado a objetos con persistencia SQLite. Integró la API de IA DeepSeek para mecánicas de apuestas inteligentes.",
                 highlight: "Implementó simulaciones de partidos en hilos para evitar el bloqueo de la interfaz. Aseguró la integración de IA DeepSeek, estableció la persistencia de filas SQLite para la lógica de herencia de usuarios premium, e incluyó autenticación estricta por RegEx."
+            },
+            nexus: {
+                title: "Nexus — Ecosistema de Reserva Unificada",
+                problem: "La reserva de espacios y recursos a menudo sufre de interfaces fragmentadas y sincronización lenta entre usuarios móviles y administradores.",
+                solution: "Diseñó un ecosistema unificado de tres capas con un backend FastAPI, un Bot de Telegram para usuarios y un panel de control multi-hilo para administración.",
+                highlight: "Motor de detección de conflictos en tiempo real con 100% de precisión. Lógica de programación ajustada al clima y sesiones de bot persistentes."
             }
         }
     }

@@ -395,6 +395,11 @@ const projectStaticData = {
         image: "./assets/ucl_abstract.png",
         stack: ["Python", "SQLite", "DeepSeek AI", "OOP", "Tkinter"],
         github: "https://github.com/unknownahmad/Champions-League-Gambling-Simulator-GUI-Edition-"
+    },
+    nexus: {
+        image: "./assets/nexus_abstract.png",
+        stack: ["FastAPI", "Python", "SQLite", "Telegram API", "CustomTkinter", "Threading"],
+        github: "https://github.com/unknownahmad/Nexus.git"
     }
 };
 
