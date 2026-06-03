@@ -400,6 +400,11 @@ const projectStaticData = {
         image: "./assets/nexus_abstract.png",
         stack: ["FastAPI", "Python", "SQLite", "Telegram API", "CustomTkinter", "Threading"],
         github: "https://github.com/unknownahmad/Nexus.git"
+    },
+    numerical: {
+        image: "./assets/numerical_abstract.png",
+        stack: ["Python", "Tkinter", "Math Algorithms", "Benchmarking", "OOP"],
+        github: "https://github.com/unknownahmad/numerical-showdown"
     }
 };
 

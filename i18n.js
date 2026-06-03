@@ -65,6 +65,8 @@ const translations = {
         proj_cl_short: "AI-driven tournament simulation with betting mechanics.",
         proj_songs_short: "Data Science analysis on how streaming platforms reshaped music architecture.",
         proj_nexus_short: "Enterprise-grade resource booking ecosystem featuring a FastAPI backend and Telegram Bot.",
+        proj_numerical_title: "The Numerical Showdown",
+        proj_numerical_short: "Interactive benchmarking suite for root-finding algorithms with custom GUI.",
         cs_problem: "The Problem",
         cs_solution: "The Solution",
         cs_highlight: "Engineering Highlights",
@@ -111,6 +113,12 @@ const translations = {
                 problem: "Modern workspace and resource booking often suffer from fragmented interfaces, slow synchronization between mobile users and administrators, and a lack of intelligent conflict resolution.",
                 solution: "Engineered a unified three-tier ecosystem featuring a high-performance FastAPI backend, a seamless Telegram Bot for mobile users, and a robust multi-threaded desktop dashboard for administrative oversight.",
                 highlight: "Implemented a real-time conflict detection engine with 100% accuracy. Integrated automated weather-adjusted scheduling logic and established persistent bot sessions with advanced administrative controls."
+            },
+            numerical: {
+                title: "The Numerical Showdown",
+                problem: "Comparing the convergence speeds and stability of different numerical methods often lacks an intuitive, visual way to see real-time iterations and computational costs.",
+                solution: "Developed an interactive benchmarking suite from scratch. Features a custom Tkinter GUI and no-library math engine for Bisection, Newton, Secant, and Fixed-Point methods.",
+                highlight: "Built a custom heuristic engine that acts as an Algorithmic Consultant, analyzing function smoothness to recommend the optimal method. Engineered live microsecond benchmarking with zero external math libraries."
             }
         }
     },
@@ -182,6 +190,8 @@ const translations = {
         proj_cl_short: "Simulation de tournoi IA avec mécanique de pari.",
         proj_songs_short: "Analyse Data Science sur l'évolution structurelle de la musique à l'ère du streaming.",
         proj_nexus_short: "Écosystème de réservation de ressources comprenant un backend FastAPI et un Bot Telegram.",
+        proj_numerical_title: "The Numerical Showdown",
+        proj_numerical_short: "Suite de benchmarking interactive pour les algorithmes de recherche de racines avec GUI personnalisée.",
         cs_problem: "Le Problème",
         cs_solution: "La Solution",
         cs_highlight: "Points Forts de l'Ingénierie",
@@ -228,6 +238,12 @@ const translations = {
                 problem: "La réservation de ressources souffre souvent d'interfaces fragmentées et d'un manque de synchronisation en temps réel entre les utilisateurs mobiles et les administrateurs.",
                 solution: "Ingénierie d'un écosystème unifié à trois niveaux comprenant un backend FastAPI haute performance, un Bot Telegram pour les utilisateurs et un tableau de bord multi-threadé pour l'administration.",
                 highlight: "Moteur de détection de conflits en temps réel. Intégration d'une logique de planification ajustée à la météo et sessions bot persistantes avec contrôles administratifs avancés."
+            },
+            numerical: {
+                title: "The Numerical Showdown",
+                problem: "La comparaison des vitesses de convergence et de la stabilité des méthodes numériques manque souvent d'un moyen visuel et intuitif pour observer les itérations en temps réel.",
+                solution: "Développement d'une suite de benchmarking interactive avec une interface Tkinter personnalisée et un moteur mathématique natif pour les méthodes de Bisection, Newton, Sécante et Point Fixe.",
+                highlight: "Création d'un moteur heuristique servant de consultant algorithmique pour recommander la méthode optimale. Intégration d'un benchmarking en direct à la microseconde sans bibliothèques mathématiques externes."
             }
         }
     },
@@ -299,6 +315,8 @@ const translations = {
         proj_cl_short: "Simulación de torneo IA con mecánica de apuestas.",
         proj_songs_short: "Análisis de Data Science sobre cómo las plataformas de streaming rediseñaron la música.",
         proj_nexus_short: "Ecosistema de reserva de recursos con backend FastAPI y Bot de Telegram automatizado.",
+        proj_numerical_title: "The Numerical Showdown",
+        proj_numerical_short: "Suite interactiva de benchmarking para algoritmos de búsqueda de raíces con GUI personalizada.",
         cs_problem: "El Problema",
         cs_solution: "La Solución",
         cs_tech: "Stack Técnico",
@@ -344,6 +362,12 @@ const translations = {
                 problem: "La reserva de espacios y recursos a menudo sufre de interfaces fragmentadas y sincronización lenta entre usuarios móviles y administradores.",
                 solution: "Diseñó un ecosistema unificado de tres capas con un backend FastAPI, un Bot de Telegram para usuarios y un panel de control multi-hilo para administración.",
                 highlight: "Motor de detección de conflictos en tiempo real con 100% de precisión. Lógica de programación ajustada al clima y sesiones de bot persistentes."
+            },
+            numerical: {
+                title: "The Numerical Showdown",
+                problem: "Comparar la velocidad de convergencia y la estabilidad de los métodos numéricos a menudo carece de una forma visual e intuitiva para ver las iteraciones en tiempo real.",
+                solution: "Desarrollo de una suite de benchmarking interactiva desde cero. Cuenta con una GUI Tkinter personalizada y un motor matemático sin bibliotecas para los métodos de Bisección, Newton, Secante y Punto Fijo.",
+                highlight: "Creación de un motor heurístico que actúa como consultor algorítmico para recomendar el método óptimo. Ingeniería de benchmarking en vivo de microsegundos sin bibliotecas matemáticas externas."
             }
         }
     }
